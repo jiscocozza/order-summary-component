@@ -1,0 +1,150 @@
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100vh;
+  }
+
+body {
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    background-size: contain;
+    min-height: 100vh;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    /* margin-left: auto;
+    margin-right: auto; */
+    background-color: white;
+    max-width: 450px;
+    /* margin-top: 100px; */
+    border-radius: 20px;
+    
+    /* display: block; */
+    
+}
+
+.card-image {
+    border-radius: 20px 20px 0 0;
+    object-fit: contain;
+}
+
+.card-body {
+    margin-right: 48px;
+    margin-left: 48px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+
+
+.card-title, .card-description {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.card-title {
+    font-weight: 900;
+    color: #22345c;
+}
+
+.card-description {
+    color: hsl(224, 23%, 55%);
+}
+
+.chosen-plan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    margin-bottom: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+
+}
+
+.item {
+    flex-grow: 1.5;
+}
+
+h2 {
+    font-size: 20px;
+    color: #22345c;
+}
+
+.chosen-plan a {
+    font-size: 16px;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    margin-right: 24px;
+}
+
+.chosen-plan a:hover {
+    color: #766cf1;
+}
+
+.chosen-plan img {
+    margin-left: 24px;
+}
+
+.primary-button {
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0 16px 10px #d8d7f7);
+}
+
+.primary-button:hover {
+    background-color: #766cf1;
+}
+
+.secondary-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    color: hsl(224, 23%, 55%);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    color: #22345c;
+}
