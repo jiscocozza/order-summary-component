@@ -1,20 +1,17 @@
 * {
-    font-family: 'Red Hat Display', sans-serif;
     margin: 0;
     padding: 0;
+    
+    font-family: 'Red Hat Display', sans-serif;
 }
 
-html {
-    min-height: 100vh;
-  }
-
 body {
+    min-height: 100vh;
+    
     background-image: url("images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
-    background-color: hsl(225, 100%, 94%);
     background-size: contain;
-    min-height: 100vh;
-
+    background-color: hsl(225, 100%, 94%);
 }
 
 .container {
@@ -22,39 +19,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     min-height: 100vh;
 }
 
 .card {
-    /* margin-left: auto;
-    margin-right: auto; */
-    background-color: white;
     max-width: 450px;
-    /* margin-top: 100px; */
+    
+    background-color: white;
     border-radius: 20px;
-    
-    /* display: block; */
-    
 }
 
 .card-image {
     border-radius: 20px 20px 0 0;
+    
     object-fit: contain;
 }
 
 .card-body {
+    display: inline-block;
+    
     margin-right: 48px;
     margin-left: 48px;
     margin-bottom: 25px;
     margin-top: 25px;
-    display: inline-block;
 }
 
-
-
 .card-title, .card-description {
-    text-align: center;
     margin-bottom: 24px;
+    
+    text-align: center;
 }
 
 .card-title {
@@ -67,17 +61,17 @@ body {
 }
 
 .chosen-plan {
-    background-color: hsl(225, 100%, 98%);
-    border-radius: 10px;
-    margin-bottom: 32px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 21px;
-
+    
+    margin-bottom: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
 }
 
 .item {
@@ -90,10 +84,11 @@ h2 {
 }
 
 .chosen-plan a {
+    margin-right: 24px;
+    
     font-size: 16px;
     text-decoration: underline;
     color: hsl(245, 75%, 52%);
-    margin-right: 24px;
 }
 
 .chosen-plan a:hover {
@@ -104,23 +99,34 @@ h2 {
     margin-left: 24px;
 }
 
+.desktop-buttons {
+    display: block;
+}
+
+.mobile-buttons {
+    display: none;
+}
+
 .primary-button {
+    display: block;
+    
     width: 100%;
+    
     margin-bottom: 8px;
+    padding: 15px 64px;
+    
     background-color: hsl(245, 75%, 52%);
     border-radius: 10px;
     border: none;
-    color: white;
-    padding: 15px 64px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
+    
     font-size: 16px;
     font-weight: 700;
-
-    cursor: pointer;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 
     filter: drop-shadow(0 16px 10px #d8d7f7);
+    cursor: pointer;    
 }
 
 .primary-button:hover {
@@ -128,23 +134,72 @@ h2 {
 }
 
 .secondary-button {
+    display: block;
+    
+    width: 100%;
+    
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    padding: 15px 32px;
+    
     background-color: white;
     border-radius: 10px;
     border: none;
-    color: hsl(224, 23%, 55%);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
+    
     font-size: 16px;
     font-weight: 700;
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    text-decoration: none;
 
     cursor: pointer;
 }
 
 .secondary-button:hover {
     color: #22345c;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-image: none;
+      background-color: #ffffff;
+    }
+
+    .container{
+        justify-content: start;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100%;
+        border-radius: 0 0 0 0;
+    }
+
+    .card-body {
+        display: block;
+        
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .chosen-plan {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .item h2 {
+        font-size: 16px;
+    }
+
+    .desktop-buttons {
+        display: none;
+    }
+    
+    .mobile-buttons {
+        display: block;
+        margin-top: auto;
+    }
 }
